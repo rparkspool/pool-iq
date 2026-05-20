@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0048)file:///Users/russparks/Downloads/pool-iq_4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Pool IQ</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="./Pool IQ_files/css2" rel="stylesheet">
 <style>
   :root{--deep:#0a1628;--water:#0e7490;--aqua:#06b6d4;--foam:#e0f7fa;--sand:#f5f0e8;--ok:#10b981;--warn:#f59e0b;--danger:#ef4444;--text:#1e293b;--muted:#64748b;--card:#ffffff;--border:#e2e8f0;}
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
@@ -121,14 +121,14 @@
 <header>
   <div class="logo">Pool <span>IQ</span></div>
   <div class="tagline">Saltwater Intelligence</div>
-  <div class="pool-info"><div class="pool-dot"></div>Inground Salt · 20,000+ gal · Taylor Kit</div>
+  <div class="pool-info"><div class="pool-dot"></div>Inground Salt · 18,000 gal · Taylor Kit</div>
 </header>
 <nav>
-  <button class="active" onclick="showTab('dashboard')">Dashboard</button>
-  <button onclick="showTab('test')">Log Test</button>
-  <button onclick="showTab('lsi')">Balance</button>
-  <button onclick="showTab('history')">History</button>
-  <button onclick="showTab('learn')">Guide</button>
+  <button class="active" onclick="showTab(&#39;dashboard&#39;)">Dashboard</button>
+  <button onclick="showTab(&#39;test&#39;)">Log Test</button>
+  <button onclick="showTab(&#39;lsi&#39;)">Balance</button>
+  <button onclick="showTab(&#39;history&#39;)">History</button>
+  <button onclick="showTab(&#39;learn&#39;)">Guide</button>
 </nav>
 <main>
 
@@ -136,18 +136,18 @@
 <div class="section active" id="tab-dashboard">
   <div class="data-mgmt" style="margin-top:14px;">
     <button class="btn-export" onclick="exportData()">⬇ Export My Data</button>
-    <button class="btn-import" onclick="document.getElementById('import-file').click()">⬆ Import Data</button>
+    <button class="btn-import" onclick="document.getElementById(&#39;import-file&#39;).click()">⬆ Import Data</button>
     <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)">
   </div>
   <div class="import-success" id="import-success">✓ Data imported successfully!</div>
-  <div id="dashboard-content"></div>
+  <div id="dashboard-content"><div class="card" style="margin-top:14px;"><div class="score-section"><div class="score-circle" style="background:conic-gradient(#ef4444 180deg,#e2e8f0 180deg);"><div class="score-inner"><div class="score-num">50</div><div class="score-label">Pool Score</div></div></div><div class="score-desc">Action Required · Tested Mon, May 4</div></div><div class="status-grid"><div class="status-item ok"><div class="status-label">Free Cl</div><div class="status-value">3 <span class="status-unit">ppm</span></div><div class="status-bar"><div class="status-fill" style="width:66.66666666666666%"></div></div><span class="status-badge">Good</span></div><div class="status-item danger"><div class="status-label">pH</div><div class="status-value">8.2 <span class="status-unit"></span></div><div class="status-bar"><div class="status-fill" style="width:100%"></div></div><span class="status-badge">Act</span></div><div class="status-item warn"><div class="status-label">Alkalinity</div><div class="status-value">60 <span class="status-unit">ppm</span></div><div class="status-bar"><div class="status-fill" style="width:16.666666666666664%"></div></div><span class="status-badge">Watch</span></div><div class="status-item danger"><div class="status-label">Calcium</div><div class="status-value">15 <span class="status-unit">ppm</span></div><div class="status-bar"><div class="status-fill" style="width:5%"></div></div><span class="status-badge">Act</span></div><div class="status-item na"><div class="status-label">CYA</div><div class="status-value">— <span class="status-unit">ppm</span></div></div><div class="status-item na"><div class="status-label">Salt</div><div class="status-value">— <span class="status-unit">ppm</span></div></div></div></div><p class="section-head">Recommendations</p><div class="card" style="padding:13px;"><div class="advice-block ok"><div class="advice-title">Chlorine ✓</div><div class="advice-text">Free chlorine is in the ideal range. Cell performing well.</div></div><div class="advice-block danger"><div class="advice-title">pH Too High</div><div class="advice-text">pH of 8.2 reduces chlorine effectiveness. Common in salt pools.</div><div class="advice-dose"><strong>What to do:</strong> Add muriatic acid: ~128 oz to lower to 7.4. Pre-dilute in bucket, pour slowly around perimeter.</div></div><div class="advice-block warn"><div class="advice-title">Low Alkalinity</div><div class="advice-text">TA of 60 ppm — pH will swing unpredictably.</div><div class="advice-dose"><strong>What to do:</strong> Add sodium bicarbonate: ~3.0 lbs to reach 80 ppm. Add in increments, retest after 4 hours.</div></div><div class="advice-block warn"><div class="advice-title">Low Calcium</div><div class="advice-text">At 15 ppm, water will leach calcium from pool shell and cell plates.</div><div class="advice-dose"><strong>What to do:</strong> Add calcium chloride: ~44 lbs to reach 200 ppm. Add slowly.</div></div></div></div>
 </div>
 
 <!-- WIZARD TEST -->
 <div class="section" id="tab-test">
   <div style="margin-bottom:11px;"><div class="form-group"><label>Test Date</label><input type="date" id="wiz-date"></div></div>
-  <div class="wiz-progress" id="wiz-progress"></div>
-  <div id="wizard-wrap"></div>
+  <div class="wiz-progress" id="wiz-progress"><div class="wiz-step-dot active" title="Water Temperature">1</div><div class="wiz-line "></div><div class="wiz-step-dot " title="Free Chlorine">2</div><div class="wiz-line "></div><div class="wiz-step-dot " title="Combined Chlorine (CC)">3</div><div class="wiz-line "></div><div class="wiz-step-dot " title="pH">4</div><div class="wiz-line "></div><div class="wiz-step-dot " title="Total Alkalinity">5</div><div class="wiz-line "></div><div class="wiz-step-dot " title="Calcium Hardness">6</div><div class="wiz-line "></div><div class="wiz-step-dot " title="CYA / Stabilizer">7</div><div class="wiz-line "></div><div class="wiz-step-dot " title="Salt Level">8</div><div class="wiz-line "></div><div class="wiz-step-dot " title="Notes">9</div></div>
+  <div id="wizard-wrap"><div class="wiz-card active"><div class="wiz-header"><div class="wiz-step-label">Step 1 of 9</div><div class="wiz-test-name">🌡️ Water Temperature</div><div class="wiz-why">Used for the LSI Water Balance calculator. Just enter what your thermometer reads.</div></div><div class="wiz-body"><div class="target-badge">🎯 Target: No fixed target — just record it</div><ul class="instr-list"><li class="instr-step"><div class="instr-num">1</div><div><div class="instr-text">Enter your current water temperature below.</div><div class="instr-note">Tip: measure 18 inches below the surface away from jets for the most accurate reading.</div></div></li></ul><div class="form-group" style="margin-bottom:0;"><label>Your Reading (°F)</label><input type="number" id="wiz-input" step="1" min="40" max="105" placeholder="e.g. 82" inputmode="decimal" style="font-size:1.7rem;font-weight:600;text-align:center;padding:15px;color:var(--deep);"></div></div><div class="wiz-actions"><button class="wiz-btn-save" onclick="wizSave()">Save &amp; Next →</button><button class="wiz-btn-skip" onclick="wizSkip()">Skip this test</button></div></div></div>
 </div>
 
 <!-- LSI -->
@@ -171,17 +171,17 @@
     <div class="card-title">🌡️ Temperature Zone Guide</div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)" style="background:#f0f9ff;">🧊 Cold · Under 60°F<span class="chevron">▼</span></div>
       <div class="kb-body"><div class="advice-block warn" style="margin-top:11px;"><div class="advice-title">What's happening</div><div class="advice-text">Cell slows or shuts off below 55°F. Cold water becomes corrosive — leaches calcium from your shell and plates. Biggest risk is a negative LSI going unnoticed over winter.</div></div>
-      <table class="kb-table"><tr><th>Parameter</th><th>Cold-Water Tip</th></tr><tr><td>Salt Cell</td><td>Expect low/no output below 55°F.</td></tr><tr><td>Calcium</td><td>Keep at 280–350 ppm to protect shell.</td></tr><tr><td>LSI Target</td><td>0.0 to +0.3 — slightly scale-forming protects surfaces.</td></tr></table>
+      <table class="kb-table"><tbody><tr><th>Parameter</th><th>Cold-Water Tip</th></tr><tr><td>Salt Cell</td><td>Expect low/no output below 55°F.</td></tr><tr><td>Calcium</td><td>Keep at 280–350 ppm to protect shell.</td></tr><tr><td>LSI Target</td><td>0.0 to +0.3 — slightly scale-forming protects surfaces.</td></tr></tbody></table>
       <div class="advice-block ok" style="margin-top:11px;"><div class="advice-title">Action Plan</div><div class="advice-text">Before temps drop below 60°F: run full panel, bump calcium to 280–350, set pH 7.4–7.6, run LSI. If negative, correct before cell shuts off.</div></div></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)" style="background:#f0fdf4;">🌤️ Mild · 60–75°F<span class="chevron">▼</span></div>
       <div class="kb-body"><div class="advice-block ok" style="margin-top:11px;"><div class="advice-title">What's happening</div><div class="advice-text">Easiest chemistry window. Cell runs normally. This is your window to dial in baseline chemistry before summer demand spikes.</div></div>
-      <table class="kb-table"><tr><th>Parameter</th><th>Tip</th></tr><tr><td>Cell Output</td><td>50–70% usually enough.</td></tr><tr><td>CYA</td><td>Get to 70–80 ppm before UV season.</td></tr><tr><td>LSI Target</td><td>0.0 to +0.2.</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Parameter</th><th>Tip</th></tr><tr><td>Cell Output</td><td>50–70% usually enough.</td></tr><tr><td>CYA</td><td>Get to 70–80 ppm before UV season.</td></tr><tr><td>LSI Target</td><td>0.0 to +0.2.</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)" style="background:#fffbeb;">☀️ Warm · 76–85°F<span class="chevron">▼</span></div>
       <div class="kb-body"><div class="advice-block warn" style="margin-top:11px;"><div class="advice-title">What's happening</div><div class="advice-text">Chlorine demand rises, pH drifts up faster from electrolysis. Calcium starts dropping out of solution. Early tile scale and cell fouling begin here.</div></div>
-      <table class="kb-table"><tr><th>Parameter</th><th>Tip</th></tr><tr><td>Free Chlorine</td><td>Test every other day. Bump cell to 75–85%.</td></tr><tr><td>pH</td><td>Drifts toward 8.0. Add acid every 2–3 days.</td></tr><tr><td>LSI Target</td><td>0.0 to +0.3.</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Parameter</th><th>Tip</th></tr><tr><td>Free Chlorine</td><td>Test every other day. Bump cell to 75–85%.</td></tr><tr><td>pH</td><td>Drifts toward 8.0. Add acid every 2–3 days.</td></tr><tr><td>LSI Target</td><td>0.0 to +0.3.</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)" style="background:#fff5f5;">🔥 Hot · 86°F+<span class="chevron">▼</span></div>
       <div class="kb-body"><div class="advice-block danger" style="margin-top:11px;"><div class="advice-title">What's happening</div><div class="advice-text">Chlorine demand can double. Algae thrives. Calcium scaling is aggressive — hot water makes CaCO₃ dramatically less soluble. Peak tile and cell fouling season.</div></div>
-      <table class="kb-table"><tr><th>Parameter</th><th>Tip</th></tr><tr><td>Free Chlorine</td><td>Test daily. Cell at 90–100%. Shock after every party.</td></tr><tr><td>pH</td><td>Can spike to 8.2+ overnight. Add acid every 3–4 days.</td></tr><tr><td>Calcium</td><td>Keep at 200–250 ppm to reduce scaling.</td></tr><tr><td>LSI Target</td><td>-0.1 to +0.2 to offset heat-scaling.</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Parameter</th><th>Tip</th></tr><tr><td>Free Chlorine</td><td>Test daily. Cell at 90–100%. Shock after every party.</td></tr><tr><td>pH</td><td>Can spike to 8.2+ overnight. Add acid every 3–4 days.</td></tr><tr><td>Calcium</td><td>Keep at 200–250 ppm to reduce scaling.</td></tr><tr><td>LSI Target</td><td>-0.1 to +0.2 to offset heat-scaling.</td></tr></tbody></table></div></div>
   </div>
   <div class="card">
     <div class="card-title">🪨 Tile Scaling: What to Do</div>
@@ -205,7 +205,7 @@
       <p style="font-size:0.79rem;">Hire a tile cleaning service for bead blasting. While waiting: run LSI under +0.2, lower pH to 7.2, lower calcium to 200–250, add sequestering agent weekly. Inspect cell plates — if tile is this scaled, the cell likely is too.</p></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">🛡️ Prevention<span class="chevron">▼</span></div>
       <div class="kb-body">
-      <table class="kb-table"><tr><th>Action</th><th>Frequency</th></tr><tr><td>Run LSI with temp</td><td>Monthly (weekly in summer)</td></tr><tr><td>Add sequestering agent</td><td>Monthly</td></tr><tr><td>Keep pH 7.2–7.4 in summer</td><td>Ongoing</td></tr><tr><td>Calcium 200–300 ppm</td><td>Don't let it creep above 350</td></tr><tr><td>Clean cell plates</td><td>Every 3 months or when output drops</td></tr><tr><td>Wipe tile waterline</td><td>Weekly</td></tr></table>
+      <table class="kb-table"><tbody><tr><th>Action</th><th>Frequency</th></tr><tr><td>Run LSI with temp</td><td>Monthly (weekly in summer)</td></tr><tr><td>Add sequestering agent</td><td>Monthly</td></tr><tr><td>Keep pH 7.2–7.4 in summer</td><td>Ongoing</td></tr><tr><td>Calcium 200–300 ppm</td><td>Don't let it creep above 350</td></tr><tr><td>Clean cell plates</td><td>Every 3 months or when output drops</td></tr><tr><td>Wipe tile waterline</td><td>Weekly</td></tr></tbody></table>
       <div class="advice-block ok" style="margin-top:11px;"><div class="advice-title">Golden Rule</div><div class="advice-text">LSI above +0.3 in summer = scale is forming somewhere, even if you can't see it yet.</div></div></div></div>
   </div>
 </div>
@@ -219,22 +219,22 @@
     <div class="card-title">Saltwater Pool Guide</div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">💧 Free Chlorine<span class="chevron">▼</span></div>
       <div class="kb-body"><p>FC is your active sanitizer. Salt cell generates it. Use FAS-DPD (Taylor K-2006) for accurate readings.</p>
-      <table class="kb-table"><tr><th>Level</th><th>Status</th><th>Action</th></tr><tr><td>&lt;1 ppm</td><td style="color:var(--danger)">Low</td><td>Increase cell output or shock</td></tr><tr><td>1–3 ppm</td><td style="color:var(--ok)">Ideal</td><td>Maintain</td></tr><tr><td>3–5 ppm</td><td style="color:var(--warn)">High</td><td>Reduce cell output</td></tr><tr><td>&gt;5 ppm</td><td style="color:var(--danger)">Excess</td><td>Reduce output, test daily</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Level</th><th>Status</th><th>Action</th></tr><tr><td>&lt;1 ppm</td><td style="color:var(--danger)">Low</td><td>Increase cell output or shock</td></tr><tr><td>1–3 ppm</td><td style="color:var(--ok)">Ideal</td><td>Maintain</td></tr><tr><td>3–5 ppm</td><td style="color:var(--warn)">High</td><td>Reduce cell output</td></tr><tr><td>&gt;5 ppm</td><td style="color:var(--danger)">Excess</td><td>Reduce output, test daily</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">🔬 pH<span class="chevron">▼</span></div>
       <div class="kb-body"><p>Salt water drifts <strong>upward</strong> from cell electrolysis. Keep 7.2–7.6.</p>
-      <table class="kb-table"><tr><th>Reading</th><th>Action</th></tr><tr><td>&lt;7.2</td><td>Add soda ash. 20k gal: ~12 oz raises 0.1</td></tr><tr><td>7.2–7.6</td><td>✓ In range</td></tr><tr><td>&gt;7.8</td><td>Add muriatic acid. ~16 oz lowers 0.1 in 20k gal</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Reading</th><th>Action</th></tr><tr><td>&lt;7.2</td><td>Add soda ash. 18k gal: ~12 oz raises 0.1</td></tr><tr><td>7.2–7.6</td><td>✓ In range</td></tr><tr><td>&gt;7.8</td><td>Add muriatic acid. ~16 oz lowers 0.1 in 18k gal</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">🌊 Total Alkalinity<span class="chevron">▼</span></div>
       <div class="kb-body"><p>Buffers pH swings. Low TA = erratic pH. High TA = stubbornly high pH.</p>
-      <table class="kb-table"><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;80 ppm</td><td>Add baking soda. ~1.5 lbs raises 10 ppm in 20k gal</td></tr><tr><td>80–120 ppm</td><td>✓ Ideal</td></tr><tr><td>&gt;120 ppm</td><td>Add muriatic acid with aeration</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;80 ppm</td><td>Add baking soda. ~1.5 lbs raises 10 ppm in 18k gal</td></tr><tr><td>80–120 ppm</td><td>✓ Ideal</td></tr><tr><td>&gt;120 ppm</td><td>Add muriatic acid with aeration</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">🧱 Calcium Hardness<span class="chevron">▼</span></div>
       <div class="kb-body"><p>Too low = water leaches calcium from shell. Too high = scale on cell and tile.</p>
-      <table class="kb-table"><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;200 ppm</td><td>Add calcium chloride. ~12 lbs raises 50 ppm in 20k gal</td></tr><tr><td>200–400 ppm</td><td>✓ Ideal for salt pools</td></tr><tr><td>&gt;400 ppm</td><td>Partial drain/refill. Scale inhibitor short-term</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;200 ppm</td><td>Add calcium chloride. ~12 lbs raises 50 ppm in 18k gal</td></tr><tr><td>200–400 ppm</td><td>✓ Ideal for salt pools</td></tr><tr><td>&gt;400 ppm</td><td>Partial drain/refill. Scale inhibitor short-term</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">🛡️ CYA / Stabilizer<span class="chevron">▼</span></div>
       <div class="kb-body"><p>Protects FC from UV. Salt pools need 70–80 ppm. Too high = chlorine lock.</p>
-      <table class="kb-table"><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;70 ppm</td><td>Add stabilizer via skimmer. ~2 lbs raises 10 ppm in 20k gal</td></tr><tr><td>70–80 ppm</td><td>✓ Ideal for salt</td></tr><tr><td>&gt;100 ppm</td><td>Partial drain/refill — only fix is dilution</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;70 ppm</td><td>Add stabilizer via skimmer. ~2 lbs raises 10 ppm in 18k gal</td></tr><tr><td>70–80 ppm</td><td>✓ Ideal for salt</td></tr><tr><td>&gt;100 ppm</td><td>Partial drain/refill — only fix is dilution</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">🧂 Salt Level<span class="chevron">▼</span></div>
       <div class="kb-body"><p>Most cells best at 2700–3400 ppm. Verify with Taylor kit — cell sensors drift.</p>
-      <table class="kb-table"><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;2700</td><td>Add pool-grade NaCl. ~50 lbs raises ~250 ppm in 20k gal</td></tr><tr><td>2700–3400</td><td>✓ Ideal</td></tr><tr><td>&gt;3400</td><td>Partial drain and refill</td></tr></table></div></div>
+      <table class="kb-table"><tbody><tr><th>Level</th><th>Action</th></tr><tr><td>&lt;2700</td><td>Add pool-grade NaCl. ~50 lbs raises ~250 ppm in 18k gal</td></tr><tr><td>2700–3400</td><td>✓ Ideal</td></tr><tr><td>&gt;3400</td><td>Partial drain and refill</td></tr></tbody></table></div></div>
     <div class="kb-item"><div class="kb-header" onclick="toggleKB(this)">📅 Maintenance Schedule<span class="chevron">▼</span></div>
       <div class="kb-body"><p><strong>2–3× per week:</strong> Test FC and pH.</p><p style="margin-top:7px;"><strong>Weekly:</strong> Full panel. Clean cell if output dropping.</p><p style="margin-top:7px;"><strong>Monthly:</strong> Visual cell check. CYA test. Sequestering agent.</p><p style="margin-top:7px;"><strong>Seasonally:</strong> Clean filter. Run LSI before opening/closing.</p><p style="margin-top:7px;"><strong>After rain or parties:</strong> Test immediately. Shock if needed. Cell at 100% for 24–48 hrs.</p></div></div>
   </div>
@@ -247,22 +247,22 @@ function getTests(){try{const r=localStorage.getItem(STORAGE_KEY);return r?JSON.
 function saveTests(t){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(t))}catch(e){}}
 
 const WIZARD_STEPS=[
-  {key:'temp',name:'Water Temperature',emoji:'🌡️',why:"Temperature affects every other reading and is required for the LSI calculator. Log it first.",target:'No fixed target — just record it',unit:'°F',placeholder:'e.g. 82',step:'1',min:40,max:105,
-   instructions:[{text:'Dip a <strong>clean thermometer</strong> about 18 inches below the surface, away from return jets.',note:'Surface temp can be several degrees higher than the bulk water.'},{text:'Wait <strong>60 seconds</strong> until the reading stabilizes.',note:''},{text:'Read and record.',note:''}]},
+  {key:'temp',name:'Water Temperature',emoji:'🌡️',why:"Used for the LSI Water Balance calculator. Just enter what your thermometer reads.",target:'No fixed target — just record it',unit:'°F',placeholder:'e.g. 82',step:'1',min:40,max:105,
+   instructions:[{text:'Enter your current water temperature below.',note:'Tip: measure 18 inches below the surface away from jets for the most accurate reading.'}]},
   {key:'chlorine',name:'Free Chlorine',emoji:'💧',why:'Free chlorine is your primary sanitizer. Test before pH — chlorine level affects how you interpret other readings.',target:'1–3 ppm (saltwater pool)',unit:'ppm',placeholder:'e.g. 2.0',step:'0.1',min:0,max:15,
    instructions:[{text:'Rinse and fill the <strong>large comparator tube to the 25 mL mark</strong> with pool water. Collect sample mid-pool, 18 inches below surface.',note:"Do not sample near return jets or skimmers. 25 mL gives 1 drop = 0.2 ppm accuracy."},{text:'Add <strong>2 full dippers of R-0870</strong> (FAS-DPD powder). Swirl until dissolved.',note:'If the pink color disappears immediately, add more R-0870 until it stays pink — this means FC is very high.'},{text:'If free chlorine is present, the water turns <strong>pink or red</strong>. If it stays clear, FC = 0.',note:''},{text:'Add <strong>R-0871 drops</strong> one at a time, swirling and counting after each drop, until the color changes from <strong>pink to colorless</strong>.',note:'Hold the bottle vertically for consistent drop size. Count every drop.'},{text:'<strong>Multiply drop count × 0.2</strong> = Free Chlorine in ppm. Enter below.',note:'Example: 10 drops × 0.2 = 2.0 ppm. Do NOT discard the sample — you need it for the CC test next.'}]},
-  {key:'cChlor',name:'Combined Chlorine (CC)',emoji:'🔴',why:'Combined chlorine causes "pool smell" and eye irritation. Should be near zero. Test immediately after Free Chlorine using the same tube.',target:'Less than 0.2 ppm',unit:'ppm',placeholder:'e.g. 0.0',step:'0.1',min:0,max:5,
-   instructions:[{text:'<strong>Use the same 25 mL tube</strong> from the Free Chlorine test — do not rinse or discard it.',note:''},{text:'Add <strong>5 drops R-0003</strong>. Swirl to mix.',note:'If combined chlorine is present, the sample turns pink again. If it stays clear, CC = 0 — you are done.'},{text:'If the water turned pink, add <strong>R-0871 drops</strong> one at a time, swirling and counting after each, until the color changes from <strong>pink to colorless</strong> again.',note:'Use the same 0.2 ppm per drop equivalence as the FC test.'},{text:'<strong>Multiply drop count × 0.2</strong> = Combined Chlorine in ppm. Enter below.',note:'0 drops (water stayed clear) = CC is 0, which is ideal. Anything over 0.2 ppm means chloramines are present.'}]},
+  {key:'cChlor',name:'Combined Chlorine (CC)',emoji:'🔴',why:'Combined chlorine causes "pool smell" and eye irritation. Should be near zero. Test immediately after Free Chlorine using the same tube.',target:'Less than 0.2 ppm',unit:'ppm',placeholder:'e.g. 0.0',step:'0.1',min:0,max:5,multiplier:0.2,inputType:'drops',dropsLabel:'R-0871 Drop Count (2nd round)',
+   instructions:[{text:'<strong>Use the same 25 mL tube</strong> from the Free Chlorine test — do not rinse or discard it.',note:''},{text:'Add <strong>5 drops R-0003</strong>. Swirl to mix.',note:'If combined chlorine is present, the sample turns pink again. If it stays clear, CC = 0 — enter 0 drops below and move on.'},{text:'If the water turned pink, add <strong>R-0871 drops</strong> one at a time, swirling and counting after each, until the color changes from <strong>pink to colorless</strong> again.',note:''},{text:'Enter your <strong>drop count</strong> below — the app calculates ppm for you.',note:'0 drops = CC is 0. Anything that calculates over 0.2 ppm means chloramines are present.'}]},
   {key:'ph',name:'pH',emoji:'🔬',why:'pH controls chlorine effectiveness and protects your equipment. Salt pools naturally drift high — test after chlorine.',target:'7.2–7.6',unit:'',placeholder:'e.g. 7.4',step:'0.1',min:6,max:9,
    instructions:[{text:'Rinse and fill the <strong>large comparator tube to the 44 mL mark</strong> with pool water.',note:'Rinse tube with pool water first to avoid contamination from prior tests.'},{text:'Add <strong>5 drops R-0004</strong> (red cap — phenol red indicator). Cap and invert to mix.',note:''},{text:'<strong>Hold comparator up to natural light</strong> (not direct sunlight) and match the color to the pH scale on the comparator block.',note:'Yellow = low pH (acidic), orange = mid range, red/pink = high pH (alkaline).'},{text:'Read the <strong>closest matching color</strong>. That is your pH reading.',note:'If between two values, pH is the average. If darker than the highest block, pH is above 8.2.'},{text:'<strong>If pH needs adjustment</strong>, keep this sample for the Acid or Base Demand test. Acid demand (R-0005) = how much acid to add to lower pH. Base demand (R-0006) = how much soda ash to raise it.',note:'Add R-0005 or R-0006 dropwise until desired pH color is matched, then use Taylor treatment tables to determine chemical dose.'}]},
   {key:'ta',name:'Total Alkalinity',emoji:'🌊',why:'Alkalinity buffers pH swings. If pH keeps drifting, TA is usually why. Test after pH.',target:'80–120 ppm',unit:'ppm',placeholder:'e.g. 100',step:'1',min:0,max:400,
    instructions:[{text:'Rinse and fill the <strong>large comparator tube to the 25 mL mark</strong> with pool water.',note:'For very high TA (suspected above 200 ppm), use 10 mL sample and multiply drops by 25 instead.'},{text:'Add <strong>2 drops R-0007</strong> (green cap). Swirl to mix.',note:'This neutralizes chlorine so it does not interfere with the test.'},{text:'Add <strong>5 drops R-0008</strong> (green cap). Swirl to mix. Sample should turn <strong>green or blue-green</strong>.',note:''},{text:'Add <strong>R-0009 drops</strong> (green cap) one at a time, swirling and counting after each drop, until the color changes from <strong>green to red</strong>.',note:'The endpoint color change is clear and distinct. Green = not done. Red = done.'},{text:'<strong>Multiply drop count × 10</strong> = Total Alkalinity in ppm. Enter below.',note:'Example: 8 drops × 10 = 80 ppm. TA changes slowly — weekly testing is enough.'}]},
-  {key:'ch',name:'Calcium Hardness',emoji:'🧱',why:'Determines if water will scale your tile and cell plates, or corrode your shell. Required for LSI calculator.',target:'200–400 ppm (salt pool)',unit:'ppm',placeholder:'e.g. 300',step:'1',min:0,max:1000,
-   instructions:[{text:'Rinse and fill the <strong>large comparator tube to the 25 mL mark</strong> with pool water.',note:'For suspected high CH (above 400 ppm), use 10 mL sample and multiply drops by 25.'},{text:'Add <strong>20 drops R-0010</strong> (blue cap), or use the pipette filled to the 1 mL mark. Swirl to mix.',note:''},{text:'Add <strong>5 drops R-0011L</strong> (blue cap). Swirl. If calcium is present, sample turns <strong>red</strong>.',note:'If water turns blue immediately, calcium is extremely low.'},{text:'Add <strong>R-0012 drops</strong> (blue cap) one at a time, swirling and counting after each, until the color changes from <strong>red to blue</strong>.',note:'Watch carefully — the endpoint is the first moment the last trace of red disappears and blue holds.'},{text:'<strong>Multiply drop count × 10</strong> = Calcium Hardness in ppm. Enter below.',note:'Example: 28 drops × 10 = 280 ppm'}]},
+  {key:'ch',name:'Calcium Hardness',emoji:'🧱',why:'Determines if water will scale your tile and cell plates, or corrode your shell. Required for LSI calculator.',target:'200–400 ppm (salt pool)',unit:'ppm',placeholder:'e.g. 300',step:'1',min:0,max:1000,multiplier:10,inputType:'drops',dropsLabel:'R-0012 Drop Count',
+   instructions:[{text:'Rinse and fill the <strong>large comparator tube to the 25 mL mark</strong> with pool water.',note:'For suspected very high CH (above 400 ppm), use 10 mL sample and tell the app to multiply by 25 instead.'},{text:'Add <strong>20 drops R-0010</strong> (blue cap), or use the pipette filled to the 1 mL mark. Swirl to mix.',note:''},{text:'Add <strong>5 drops R-0011L</strong> (blue cap). Swirl. If calcium is present, sample turns <strong>red</strong>.',note:'If water turns blue immediately, calcium is extremely low.'},{text:'Add <strong>R-0012 drops</strong> (blue cap) one at a time, swirling and counting after each, until the color changes from <strong>red to blue</strong>.',note:'Endpoint = first moment the last trace of red disappears and blue holds.'},{text:'Enter your <strong>drop count</strong> below — the app calculates ppm for you.',note:''}]},
   {key:'cya',name:'CYA / Stabilizer',emoji:'🛡️',why:'Protects chlorine from UV. Salt pools need 70–80 ppm. Test monthly — CYA changes slowly.',target:'70–80 ppm (salt pool)',unit:'ppm',placeholder:'e.g. 75',step:'1',min:0,max:200,
    instructions:[{text:'Rinse and fill the <strong>CYA dispensing bottle (#9191)</strong> — the tall plastic bottle with black markings — to the <strong>7 mL mark</strong> with pool water.',note:'This is the long narrow bottle, not the comparator tube.'},{text:'Add <strong>R-0013</strong> (white cap) directly into the same dispensing bottle until liquid reaches the <strong>14 mL mark</strong>. Cap the bottle.',note:'R-0013 is the reagent that creates the cloudiness. The mixture will turn white/cloudy — this is correct and expected.'},{text:'<strong>Shake the bottle for 30 seconds</strong> to fully mix. You will see a cloudy white solution.',note:'The cloudiness is what you are measuring against the black dot. If it stays clear, something is wrong — recheck that you used R-0013.'},{text:'<strong>Slowly pour the cloudy solution</strong> into the small comparator tube (the one with the black dot on the bottom). Look straight down through the tube from above while pouring.',note:'Pour slowly and watch the dot. Stop pouring the moment the black dot just disappears when viewed from directly above.'},{text:'<strong>Read the number on the tube</strong> at the liquid level — that is your CYA in ppm. Enter below.',note:'If the dot disappears before reaching 90 ppm, CYA may be very high (90+). Retest: fill dispensing bottle to 7 mL with pool water, add tap water to 14 mL (instead of R-0013), shake, then continue — double the result.'}]},
-  {key:'salt',name:'Salt Level',emoji:'🧂',why:'Must be in range for your cell to generate chlorine. Test weekly or after significant water loss — changes slowly.',target:'2700–3400 ppm',unit:'ppm',placeholder:'e.g. 3200',step:'10',min:0,max:6000,
-   instructions:[{text:'Rinse and fill <strong>sample tube #9198</strong> (or the large comparator tube) to the <strong>10 mL mark</strong> with pool water from mid-pool, 18 inches below surface.',note:'Sample away from jets and away from any area where you recently added salt.'},{text:'Add <strong>1 drop R-0630</strong>. Swirl to mix. The sample should turn <strong>yellow</strong>.',note:'Hold bottle vertically for accurate drop size. Only 1 drop — not multiple.'},{text:'Add <strong>R-0718 drops</strong> one at a time, swirling and counting after each drop, until the color changes from <strong>yellow to a milky salmon (brick) red</strong>.',note:'Stop at the first color change. Do not keep adding drops past the endpoint or the color will turn brown, which is past the endpoint.'},{text:'<strong>Multiply drop count × 200</strong> = Salt in ppm. Enter below.',note:'Example: 16 drops × 200 = 3,200 ppm. Note: R-0718 is the correct reagent for the K-2006C salt test — not R-0631.'}]},
+  {key:'salt',name:'Salt Level',emoji:'🧂',why:'Must be in range for your cell to generate chlorine. Test weekly or after significant water loss — changes slowly.',target:'2700–3400 ppm',unit:'ppm',placeholder:'e.g. 3200',step:'10',min:0,max:6000,multiplier:200,inputType:'drops',dropsLabel:'R-0718 Drop Count',
+   instructions:[{text:'Rinse and fill <strong>sample tube #9198</strong> (or the large comparator tube) to the <strong>10 mL mark</strong> with pool water from mid-pool, 18 inches below surface.',note:'Sample away from jets and away from any area where you recently added salt.'},{text:'Add <strong>1 drop R-0630</strong>. Swirl to mix. The sample should turn <strong>yellow</strong>.',note:'Hold bottle vertically for accurate drop size. Only 1 drop — not multiple.'},{text:'Add <strong>R-0718 drops</strong> one at a time, swirling and counting after each drop, until the color changes from <strong>yellow to a milky salmon (brick) red</strong>.',note:'Stop at first color change. Do not go past the endpoint or the color turns brown.'},{text:'Enter your <strong>drop count</strong> below — the app calculates salt ppm for you.',note:'R-0718 is the correct reagent for the K-2006C salt test — not R-0631.'}]},
   {key:'notes',name:'Notes',emoji:'📝',why:'Record events that might explain your readings — chemical additions, rain, bather load, algae, cell output.',target:'Optional — but worth it',unit:'',placeholder:'e.g. Added shock last night, heavy rain yesterday, cell at 70%...',step:null,min:null,max:null,
    instructions:[{text:'Note any <strong>recent events</strong>: chemical additions in last 24 hrs, heavy bather load, rain, visible algae, unusual water color.',note:''},{text:'Note your <strong>salt cell output %</strong> if you know it — helps track patterns.',note:'Example: "Cell at 70%, pH drifting high all week"'}]}
 ];
@@ -287,18 +287,57 @@ function renderWizardStep(){
   if(wizCurrentStep>=WIZARD_STEPS.length){renderWizardSummary(wrap);return;}
   const s=WIZARD_STEPS[wizCurrentStep];
   const instrHTML=s.instructions.map((instr,i)=>`<li class="instr-step"><div class="instr-num">${i+1}</div><div><div class="instr-text">${instr.text}</div>${instr.note?`<div class="instr-note">${instr.note}</div>`:''}</div></li>`).join('');
-  const inputHTML=s.key==='notes'
-    ?`<textarea id="wiz-input" rows="4" placeholder="${s.placeholder}" style="font-size:0.92rem;resize:none;"></textarea>`
-    :`<input type="number" id="wiz-input" step="${s.step}" min="${s.min}" max="${s.max}" placeholder="${s.placeholder}" inputmode="decimal" style="font-size:1.7rem;font-weight:600;text-align:center;padding:15px;color:var(--deep);">`;
-  wrap.innerHTML=`<div class="wiz-card active"><div class="wiz-header"><div class="wiz-step-label">Step ${wizCurrentStep+1} of ${WIZARD_STEPS.length}</div><div class="wiz-test-name">${s.emoji} ${s.name}</div><div class="wiz-why">${s.why}</div></div><div class="wiz-body"><div class="target-badge">🎯 Target: ${s.target}</div><p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin-bottom:9px;">How to test</p><ul class="instr-list">${instrHTML}</ul><div class="form-group" style="margin-bottom:0;"><label>${s.key==='notes'?'Your Notes':`Your Reading${s.unit?' ('+s.unit+')':''}`}</label>${inputHTML}</div></div><div class="wiz-actions"><button class="wiz-btn-save" onclick="wizSave()">${wizCurrentStep<WIZARD_STEPS.length-1?'Save &amp; Next →':'Save &amp; Finish ✓'}</button><button class="wiz-btn-skip" onclick="wizSkip()">Skip this test</button>${wizCurrentStep>0?'<button class="btn-ghost" onclick="wizBack()">← Go back</button>':''}</div></div>`;
-  setTimeout(()=>{const inp=document.getElementById('wiz-input');if(inp)inp.focus();},100);
+
+  let inputHTML='';
+  if(s.key==='notes'){
+    inputHTML=`<textarea id="wiz-input" rows="4" placeholder="${s.placeholder}" style="font-size:0.92rem;resize:none;"></textarea>`;
+  } else if(s.inputType==='drops'){
+    inputHTML=`
+      <label>${s.dropsLabel}</label>
+      <input type="number" id="wiz-drops" step="1" min="0" max="999" placeholder="e.g. 10" inputmode="numeric" style="font-size:1.7rem;font-weight:600;text-align:center;padding:15px;color:var(--deep);" oninput="calcDropResult()">
+      <div id="drop-result" style="margin-top:10px;padding:12px;background:var(--foam);border:1px solid #a5f3fc;border-radius:10px;text-align:center;display:none;">
+        <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">Calculated Result</div>
+        <div id="drop-result-val" style="font-size:1.8rem;font-weight:700;color:var(--water);"></div>
+        <div style="font-size:0.72rem;color:var(--muted);">drops × ${s.multiplier} = result${s.unit?' in '+s.unit:''}</div>
+      </div>`;
+  } else {
+    inputHTML=`<input type="number" id="wiz-input" step="${s.step}" min="${s.min}" max="${s.max}" placeholder="${s.placeholder}" inputmode="decimal" style="font-size:1.7rem;font-weight:600;text-align:center;padding:15px;color:var(--deep);">`;
+  }
+
+  const showInstr = s.instructions.length > 1 || (s.instructions.length===1 && s.instructions[0].text!=='Enter your current water temperature below.');
+  const instrSection = showInstr ? `<p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin-bottom:9px;">How to test</p><ul class="instr-list">${instrHTML}</ul>` : `<ul class="instr-list">${instrHTML}</ul>`;
+
+  wrap.innerHTML=`<div class="wiz-card active"><div class="wiz-header"><div class="wiz-step-label">Step ${wizCurrentStep+1} of ${WIZARD_STEPS.length}</div><div class="wiz-test-name">${s.emoji} ${s.name}</div><div class="wiz-why">${s.why}</div></div><div class="wiz-body"><div class="target-badge">🎯 Target: ${s.target}</div>${instrSection}<div class="form-group" style="margin-bottom:0;"><label>${s.key==='notes'?'Your Notes':s.inputType==='drops'?'':'Your Reading'+( s.unit?' ('+s.unit+')':'')}</label>${inputHTML}</div></div><div class="wiz-actions"><button class="wiz-btn-save" onclick="wizSave()">${wizCurrentStep<WIZARD_STEPS.length-1?'Save &amp; Next →':'Save &amp; Finish ✓'}</button><button class="wiz-btn-skip" onclick="wizSkip()">Skip this test</button>${wizCurrentStep>0?'<button class="btn-ghost" onclick="wizBack()">← Go back</button>':''}</div></div>`;
+  setTimeout(()=>{
+    const inp=document.getElementById('wiz-drops')||document.getElementById('wiz-input');
+    if(inp)inp.focus();
+  },100);
+}
+
+function calcDropResult(){
+  const s=WIZARD_STEPS[wizCurrentStep];
+  const drops=parseFloat(document.getElementById('wiz-drops').value);
+  const resultDiv=document.getElementById('drop-result');
+  const resultVal=document.getElementById('drop-result-val');
+  if(isNaN(drops)||drops<0){resultDiv.style.display='none';return;}
+  const result=(drops*s.multiplier).toFixed(s.multiplier<1?1:0);
+  resultVal.textContent=result+(s.unit?' '+s.unit:'');
+  resultDiv.style.display='block';
 }
 
 function wizSave(){
-  const inp=document.getElementById('wiz-input');
   const s=WIZARD_STEPS[wizCurrentStep];
-  const val=inp?inp.value.trim():'';
-  wizState[s.key]=val===''?'__skipped__':val;
+  let val='';
+  if(s.inputType==='drops'){
+    const dropsEl=document.getElementById('wiz-drops');
+    const drops=dropsEl?dropsEl.value.trim():'';
+    if(drops===''){wizState[s.key]='__skipped__';}
+    else{val=(parseFloat(drops)*s.multiplier).toFixed(s.multiplier<1?1:0);wizState[s.key]=val;}
+  } else {
+    const inp=document.getElementById('wiz-input');
+    val=inp?inp.value.trim():'';
+    wizState[s.key]=val===''?'__skipped__':val;
+  }
   wizCurrentStep++;renderWizardProgress();renderWizardStep();
 }
 function wizSkip(){
@@ -372,13 +411,13 @@ function showChemicalOrder(test){
 
 function buildChemOrder(t){
   const steps=[];
-  const g=22000;
+  const g=18000;
 
   // STEP 1: Total Alkalinity — must come first
   if(t.ta!==''){
     const ta=parseFloat(t.ta);
     if(ta<80){
-      steps.push({name:'1st: Raise Total Alkalinity',why:'Alkalinity is the foundation. Fix it first or your pH will never stay stable — you will be chasing it all day.',action:`Add sodium bicarbonate (baking soda): ~${((80-ta)/10*1.5*(g/20000)).toFixed(1)} lbs to reach 80 ppm. Broadcast around the pool perimeter with pump running. Wait 4 hours, retest before moving to pH.`,cls:'warn-action',wait:'Wait 4 hours, retest TA before next step'});
+      steps.push({name:'1st: Raise Total Alkalinity',why:'Alkalinity is the foundation. Fix it first or your pH will never stay stable — you will be chasing it all day.',action:`Add sodium bicarbonate (baking soda): ~${((80-ta)/10*1.5*(g/18000)).toFixed(1)} lbs to reach 80 ppm. Broadcast around the pool perimeter with pump running. Wait 4 hours, retest before moving to pH.`,cls:'warn-action',wait:'Wait 4 hours, retest TA before next step'});
     } else if(ta>120){
       steps.push({name:'1st: Lower Total Alkalinity',why:'High TA locks your pH high and makes it nearly impossible to lower. Fix this first.',action:`Add muriatic acid to lower TA. Add in small amounts with pump running and aerate aggressively (point returns up, run waterfall/spa jets) — aeration lowers TA while allowing pH to stabilize naturally. Target 80–120 ppm.`,cls:'warn-action',wait:'Wait 4+ hours, retest before next step'});
     }
@@ -388,9 +427,9 @@ function buildChemOrder(t){
   if(t.ph!==''){
     const ph=parseFloat(t.ph);
     if(ph<7.2){
-      steps.push({name:`${steps.length+1}${steps.length===0?'st':steps.length===1?'nd':'rd'}: Raise pH`,why:'pH must be in range before adding any other chemicals — especially chlorine. Low pH corrodes equipment and irritates eyes.',action:`Add soda ash (sodium carbonate): ~${(Math.round((7.4-ph)/0.1)*(g/20000)*12).toFixed(0)} oz to raise to 7.4. Dissolve in a bucket of water first, then broadcast with pump running. Never add dry soda ash directly to pool.`,cls:'warn-action',wait:'Wait 30 min, retest pH'});
+      steps.push({name:`${steps.length+1}${steps.length===0?'st':steps.length===1?'nd':'rd'}: Raise pH`,why:'pH must be in range before adding any other chemicals — especially chlorine. Low pH corrodes equipment and irritates eyes.',action:`Add soda ash (sodium carbonate): ~${(Math.round((7.4-ph)/0.1)*(g/18000)*12).toFixed(0)} oz to raise to 7.4. Dissolve in a bucket of water first, then broadcast with pump running. Never add dry soda ash directly to pool.`,cls:'warn-action',wait:'Wait 30 min, retest pH'});
     } else if(ph>7.6){
-      steps.push({name:`${steps.length+1}${steps.length===0?'st':steps.length===1?'nd':'rd'}: Lower pH`,why:'High pH reduces chlorine effectiveness dramatically and contributes to calcium scaling on your tile and cell.',action:`Add muriatic acid: ~${(Math.round((ph-7.4)/0.1)*(g/20000)*16).toFixed(0)} oz to lower to 7.4. Pre-dilute in a bucket of water. Pour slowly around the perimeter with pump running. Never add acid near the skimmer or near people.`,cls:'danger-action',wait:'Wait 30 min, retest pH'});
+      steps.push({name:`${steps.length+1}${steps.length===0?'st':steps.length===1?'nd':'rd'}: Lower pH`,why:'High pH reduces chlorine effectiveness dramatically and contributes to calcium scaling on your tile and cell.',action:`Add muriatic acid: ~${(Math.round((ph-7.4)/0.1)*(g/18000)*16).toFixed(0)} oz to lower to 7.4. Pre-dilute in a bucket of water. Pour slowly around the perimeter with pump running. Never add acid near the skimmer or near people.`,cls:'danger-action',wait:'Wait 30 min, retest pH'});
     }
   }
 
@@ -399,7 +438,7 @@ function buildChemOrder(t){
     const ch=parseFloat(t.ch);
     if(ch<200){
       const n=steps.length+1;
-      steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Raise Calcium Hardness`,why:'Adjust calcium after pH is stable. Low calcium makes water aggressive — it will leach calcium from your shell and cell plates.',action:`Add calcium chloride: ~${((200-ch)/50*12*(g/20000)).toFixed(0)} lbs to reach 200 ppm. Add in small amounts (no more than 10 lbs at a time in 20k gal). Dissolve in a bucket first. Pool water will warm up slightly — this is normal.`,cls:'warn-action',wait:'Wait 4 hours before next step'});
+      steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Raise Calcium Hardness`,why:'Adjust calcium after pH is stable. Low calcium makes water aggressive — it will leach calcium from your shell and cell plates.',action:`Add calcium chloride: ~${((200-ch)/50*12*(g/18000)).toFixed(0)} lbs to reach 200 ppm. Add in small amounts (no more than 10 lbs at a time in 18k gal). Dissolve in a bucket first. Pool water will warm up slightly — this is normal.`,cls:'warn-action',wait:'Wait 4 hours before next step'});
     } else if(ch>400){
       const n=steps.length+1;
       steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Lower Calcium Hardness`,why:'High calcium causes scale on tile, cell plates, and plumbing. There is no chemical fix — only dilution.',action:`Partial drain and refill is the only remedy. Drain 20–25% and refill with fresh water. Retest before draining more. Add a scale sequestering agent (Natural Chemistry Scale Free) immediately to keep existing calcium in solution while you work on it.`,cls:'danger-action',wait:'Retest after refill'});
@@ -411,7 +450,7 @@ function buildChemOrder(t){
     const cya=parseFloat(t.cya);
     if(cya<70){
       const n=steps.length+1;
-      steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Raise CYA / Stabilizer`,why:'Add CYA before adjusting chlorine — it protects the chlorine you are about to add from burning off in UV. Without enough CYA, any chlorine you add to a salt pool degrades fast.',action:`Add cyanuric acid: ~${((70-cya)/10*2*(g/20000)).toFixed(1)} lbs. Place in a mesh sock or old pantyhose in the skimmer basket and let pool water dissolve it over 24–48 hours. Do NOT add directly to the pool — it takes too long to dissolve.`,cls:'warn-action',wait:'Wait 24–48 hours, retest CYA'});
+      steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Raise CYA / Stabilizer`,why:'Add CYA before adjusting chlorine — it protects the chlorine you are about to add from burning off in UV. Without enough CYA, any chlorine you add to a salt pool degrades fast.',action:`Add cyanuric acid: ~${((70-cya)/10*2*(g/18000)).toFixed(1)} lbs. Place in a mesh sock or old pantyhose in the skimmer basket and let pool water dissolve it over 24–48 hours. Do NOT add directly to the pool — it takes too long to dissolve.`,cls:'warn-action',wait:'Wait 24–48 hours, retest CYA'});
     } else if(cya>100){
       const n=steps.length+1;
       steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Lower CYA (Dilution Only)`,why:'CYA above 100 ppm causes chlorine lock — your chlorine is present but ineffective. The only fix is dilution.',action:`Drain 25% of pool water and refill with fresh water. This lowers CYA by approximately 25%. Retest before draining more. Do NOT add any more CYA or stabilized chlorine until levels drop below 80 ppm.`,cls:'danger-action',wait:'Retest after refill'});
@@ -423,7 +462,7 @@ function buildChemOrder(t){
     const salt=parseFloat(t.salt);
     if(salt<2700){
       const n=steps.length+1;
-      steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Add Salt`,why:'Salt must be in range before relying on your cell for chlorine production. Adjust salt level after water balance chemicals have circulated.',action:`Add pool-grade NaCl (99% pure sodium chloride): ~${(Math.round((3200-salt)/250)*50*(g/20000)).toFixed(0)} lbs to reach 3,200 ppm. Broadcast around the perimeter. Allow pump to run for 24 hours before retesting — salt takes time to fully dissolve and distribute.`,cls:'warn-action',wait:'Wait 24 hours, retest salt'});
+      steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Add Salt`,why:'Salt must be in range before relying on your cell for chlorine production. Adjust salt level after water balance chemicals have circulated.',action:`Add pool-grade NaCl (99% pure sodium chloride): ~${(Math.round((3200-salt)/250)*50*(g/18000)).toFixed(0)} lbs to reach 3,200 ppm. Broadcast around the perimeter. Allow pump to run for 24 hours before retesting — salt takes time to fully dissolve and distribute.`,cls:'warn-action',wait:'Wait 24 hours, retest salt'});
     } else if(salt>3400){
       const n=steps.length+1;
       steps.push({name:`${n}${n===1?'st':n===2?'nd':'rd'}: Lower Salt`,why:'Salt above 3,400 ppm may trigger cell alarms and can affect taste.',action:`Partial drain and refill. Draining ~10% and refilling with fresh water lowers salt by approximately 10%. Retest before swimming.`,cls:'warn-action',wait:'Retest after refill'});
@@ -457,28 +496,28 @@ const PARAMS={
     high_advice:(v)=>({title:'High Chlorine',level:'warn',text:`At ${v} ppm, chlorine is elevated. Avoid swimming until below 3 ppm.`,dose:'Reduce cell to 50–60%. Sunlight lowers it within 24–48 hrs.'}),
     ok_advice:()=>({title:'Chlorine ✓',level:'ok',text:'Free chlorine is in the ideal range. Cell performing well.'})},
   ph:{label:'pH',unit:'',min:7.2,max:7.6,low:7.0,high:7.8,
-    low_advice:(v,g)=>({title:'pH Too Low',level:'danger',text:`pH of ${v} is acidic. Corrosive to cell, equipment, irritating to eyes.`,dose:`Add soda ash: ~${(Math.round((7.4-v)/0.1)*(g/20000)*12).toFixed(0)} oz to raise to 7.4. Dissolve in bucket, broadcast with pump running.`}),
-    high_advice:(v,g)=>({title:'pH Too High',level:v>7.8?'danger':'warn',text:`pH of ${v} reduces chlorine effectiveness. Common in salt pools.`,dose:`Add muriatic acid: ~${(Math.round((v-7.4)/0.1)*(g/20000)*16).toFixed(0)} oz to lower to 7.4. Pre-dilute in bucket, pour slowly around perimeter.`}),
+    low_advice:(v,g)=>({title:'pH Too Low',level:'danger',text:`pH of ${v} is acidic. Corrosive to cell, equipment, irritating to eyes.`,dose:`Add soda ash: ~${(Math.round((7.4-v)/0.1)*(g/18000)*12).toFixed(0)} oz to raise to 7.4. Dissolve in bucket, broadcast with pump running.`}),
+    high_advice:(v,g)=>({title:'pH Too High',level:v>7.8?'danger':'warn',text:`pH of ${v} reduces chlorine effectiveness. Common in salt pools.`,dose:`Add muriatic acid: ~${(Math.round((v-7.4)/0.1)*(g/18000)*16).toFixed(0)} oz to lower to 7.4. Pre-dilute in bucket, pour slowly around perimeter.`}),
     ok_advice:()=>({title:'pH ✓',level:'ok',text:'pH balanced. Chlorine working at full effectiveness.'})},
   ta:{label:'Total Alkalinity',unit:'ppm',min:80,max:120,low:60,high:150,
-    low_advice:(v,g)=>({title:'Low Alkalinity',level:'warn',text:`TA of ${v} ppm — pH will swing unpredictably.`,dose:`Add sodium bicarbonate: ~${((80-v)/10*1.5*(g/20000)).toFixed(1)} lbs to reach 80 ppm. Add in increments, retest after 4 hours.`}),
-    high_advice:(v,g)=>({title:'High Alkalinity',level:'warn',text:`TA of ${v} ppm — pH will resist lowering.`,dose:`Add muriatic acid with aeration. ~${((v-100)/10*1.3*(g/20000)).toFixed(1)} lbs dry acid equivalent.`}),
+    low_advice:(v,g)=>({title:'Low Alkalinity',level:'warn',text:`TA of ${v} ppm — pH will swing unpredictably.`,dose:`Add sodium bicarbonate: ~${((80-v)/10*1.5*(g/18000)).toFixed(1)} lbs to reach 80 ppm. Add in increments, retest after 4 hours.`}),
+    high_advice:(v,g)=>({title:'High Alkalinity',level:'warn',text:`TA of ${v} ppm — pH will resist lowering.`,dose:`Add muriatic acid with aeration. ~${((v-100)/10*1.3*(g/18000)).toFixed(1)} lbs dry acid equivalent.`}),
     ok_advice:()=>({title:'Alkalinity ✓',level:'ok',text:'Total alkalinity is buffering pH effectively.'})},
   ch:{label:'Calcium Hardness',unit:'ppm',min:200,max:400,low:150,high:500,
-    low_advice:(v,g)=>({title:'Low Calcium',level:'warn',text:`At ${v} ppm, water will leach calcium from pool shell and cell plates.`,dose:`Add calcium chloride: ~${((200-v)/50*12*(g/20000)).toFixed(0)} lbs to reach 200 ppm. Add slowly.`}),
+    low_advice:(v,g)=>({title:'Low Calcium',level:'warn',text:`At ${v} ppm, water will leach calcium from pool shell and cell plates.`,dose:`Add calcium chloride: ~${((200-v)/50*12*(g/18000)).toFixed(0)} lbs to reach 200 ppm. Add slowly.`}),
     high_advice:(v)=>({title:'High Calcium',level:'warn',text:`At ${v} ppm, scaling risk on cell and tile is elevated.`,dose:'Add scale inhibitor. Above 500 ppm, plan a partial drain/refill.'}),
     ok_advice:()=>({title:'Calcium ✓',level:'ok',text:'Calcium is in safe range for your saltwater system.'})},
   cya:{label:'CYA / Stabilizer',unit:'ppm',min:70,max:80,low:50,high:100,
-    low_advice:(v,g)=>({title:'Low CYA',level:'warn',text:`At ${v} ppm, UV is degrading chlorine rapidly. Cell working overtime.`,dose:`Add cyanuric acid: ~${((70-v)/10*2*(g/20000)).toFixed(1)} lbs via skimmer. Retest after 24 hours.`}),
+    low_advice:(v,g)=>({title:'Low CYA',level:'warn',text:`At ${v} ppm, UV is degrading chlorine rapidly. Cell working overtime.`,dose:`Add cyanuric acid: ~${((70-v)/10*2*(g/18000)).toFixed(1)} lbs via skimmer. Retest after 24 hours.`}),
     high_advice:(v)=>({title:'High CYA',level:v>100?'danger':'warn',text:`At ${v} ppm, chlorine effectiveness is compromised.`,dose:v>100?'Partial drain/refill — only remedy is dilution.':'Maintain FC above 3 ppm. Add no more CYA.'}),
     ok_advice:()=>({title:'CYA ✓',level:'ok',text:'Stabilizer in ideal range for saltwater system.'})},
   salt:{label:'Salt Level',unit:'ppm',min:2700,max:3400,low:2500,high:3600,
-    low_advice:(v,g)=>({title:'Low Salt',level:v<2500?'danger':'warn',text:`At ${v} ppm, cell may shut off or underperform.`,dose:`Add pool-grade NaCl: ~${(Math.round((3200-v)/250)*50*(g/20000)).toFixed(0)} lbs to reach 3,200 ppm. Allow 24 hrs to dissolve.`}),
+    low_advice:(v,g)=>({title:'Low Salt',level:v<2500?'danger':'warn',text:`At ${v} ppm, cell may shut off or underperform.`,dose:`Add pool-grade NaCl: ~${(Math.round((3200-v)/250)*50*(g/18000)).toFixed(0)} lbs to reach 3,200 ppm. Allow 24 hrs to dissolve.`}),
     high_advice:(v)=>({title:'High Salt',level:'warn',text:`At ${v} ppm, salt is above range. Cell may alarm.`,dose:'Partial drain and refill. ~10% drain lowers salt ~10%.'}),
     ok_advice:()=>({title:'Salt Level ✓',level:'ok',text:'Salt in ideal operating range for your cell.'})}
 };
 
-function analyzeTest(t,gallons=22000){
+function analyzeTest(t,gallons=18000){
   const advice=[];let score=100;
   [{key:'chlorine',val:t.chlorine},{key:'ph',val:t.ph},{key:'ta',val:t.ta},{key:'ch',val:t.ch},{key:'cya',val:t.cya},{key:'salt',val:t.salt}].forEach(({key,val})=>{
     if(val===null||val===undefined||val==='')return;
@@ -635,5 +674,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   initWizard();renderDashboard();
 });
 </script>
-</body>
-</html>
+
+
+</body></html>
